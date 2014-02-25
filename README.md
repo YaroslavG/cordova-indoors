@@ -7,7 +7,7 @@ Cordova/Phonegap Plugin for indoo.rs
 EXAMPLE USAGE: 
 
 ```javascript
-IndoorNav.init('APIKEY', BUILDING-ID);
+IndoorNav.init('APIKEY', 'BUILDINGID');
 
 $(window).unload(function() {
   IndoorNav.destruct();
