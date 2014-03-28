@@ -66,18 +66,6 @@ public class indoors extends CordovaPlugin implements IndoorsLocationListener {
             callbackContext.sendPluginResult(pluginResult);
             return true;
         }
-    	else if(action.equals("setUsername")) {
-    		if(indoors instanceof Indoors) { 
-	    		indoors.setUsername(args.getString(0));
-	    		
-        		sendResult("setUsername", "success", "success", PluginResult.Status.OK);
-	            return true;
-    		}
-    		else {
-        		sendResult("setUsernameError", "indoo.rs not initialized", "error", PluginResult.Status.ERROR);
-	            return false;
-    		}
-    	}
     	else if(action.equals("setEvaluationMode")) {
     		if(indoors instanceof Indoors) { 
     			if(args.getBoolean(0)) {
@@ -93,23 +81,6 @@ public class indoors extends CordovaPlugin implements IndoorsLocationListener {
     		else {
         		sendResult("setEvaluationModeError", "indoo.rs not initialized", "error", PluginResult.Status.ERROR);
 	            return false;
-    		}
-    	}
-    	else if(action.equals("setDirectNet")) {
-    		if(indoors instanceof Indoors) { 
-    			if(args.getBoolean(0)) {
-    				indoors.startDirectNet();
-    			}
-    			else {
-    				indoors.stopDirectNet();
-    			}
-    			
-    			sendResult("setDirectNet", "success", "success", PluginResult.Status.OK);
-    			return true;
-    		}
-    		else {
-    			sendResult("setDirectNetError", "indoo.rs not initialized", "error", PluginResult.Status.ERROR);
-    			return false;
     		}
     	}
     	else if(action.equals("destruct")) {

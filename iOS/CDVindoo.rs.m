@@ -116,23 +116,12 @@
     [[Indoors instance] removeLocationListener: self.indoorsAdapter];
 }
 
-- (void)setUsername:(CDVInvokedUrlCommand *)command {
-    //TODO
-    //NSString* userName = [command.arguments objectAtIndex:0];
-    [self fail:@"setUsername" withData:@"not implemented/available on iOS"];
-}
-
 - (void)setEvaluationMode:(CDVInvokedUrlCommand *)command {
     BOOL flag = [[command.arguments objectAtIndex:0] boolValue];
     [[Indoors instance] enableEvaluationMode:flag];
     [self success:@"setEvaluationMode" withData:@"success"];
 }
 
-- (void)setDirectNet:(CDVInvokedUrlCommand *)command {
-    //TODO
-    //BOOL flag = [[command.arguments objectAtIndex:0] boolValue];
-    [self fail:@"setDirectNet" withData:@"not implemented/available on iOS"];
-}
 
 
 

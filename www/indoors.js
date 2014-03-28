@@ -12,17 +12,8 @@ var indoors = function(apiKey, buildingId) {
 };
 
 indoors.prototype = {
-	setUsername: function(name) {
-		this.userName = name;
-		this.cordovaExec('setUsername', [name]);
-	},
-		
 	setEvaluationMode: function(flag) {
 		this.cordovaExec('setEvaluationMode', [flag]);
-	},
-	
-	setDirectNet: function(flag) {
-		this.cordovaExec('setDirectNet', [flag]);
 	},
 	
 	destruct: function() {
