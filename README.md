@@ -27,9 +27,6 @@ IndoorNav = {
     	IndoorNav.indoors.onsuccess = function(e) {
     		try {
     			console.log('SUCCESS: ' + e.data.indoorsEvent + ' | DATA: ' + e.data.indoorsData); //TODO
-    			if(e.data.indoorsEvent == 'connected') {
-    				IndoorNav.indoors.setUsername('MyName'); //TODO
-    			} 
     		}
     		catch (e) {}
     	};
