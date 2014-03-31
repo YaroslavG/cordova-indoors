@@ -24,11 +24,6 @@
 - (NSArray *)zonesForLocation:(IDSCoordinate *)location {
     NSMutableArray *zones = [NSMutableArray array];
    
-    //TODO
-    NSLog(@"%d", [self.indoorsInstance.building.floors count]);
-    NSArray * allKeys = [self.indoorsInstance.building.floors allKeys];
-    NSLog(@"%d", [allKeys count]);
-    
     if (self.indoorsInstance.building) {
         for (IDSFloor *floor in [self.indoorsInstance.building.floors allValues]) {
             if (floor.level == location.z) {
@@ -73,8 +68,7 @@
     }
 }
 
-// TODO -> EVENT NAME Schreibweise!!!!!!
-- (void)leftBuiling:(IDSBuilding*) building {
+- (void)leftBuilding:(IDSBuilding*) building {
     NSString *bid = [NSString stringWithFormat:@"%d", building.buildingID];
     [self.indoorsInstance message:@"leftBuilding" withData:bid];
 }
@@ -126,7 +120,6 @@
 
 
 -(void)message:(NSString *)event withData:(NSString *)data {
-    NSLog(@"%@", event); //TODO
     [self _callback:event withData:data withType:@"message" withStatusCode:CDVCommandStatus_OK];
 }
 
