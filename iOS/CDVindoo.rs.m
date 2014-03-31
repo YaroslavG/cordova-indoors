@@ -11,6 +11,7 @@
 
 
 @interface IDLocationAdapter : IndoorsLocationAdapter
+    @property (assign) NSString* lastZones;
     @property (nonatomic,strong) CDVindoors* indoorsInstance;
 @end
 
@@ -58,7 +59,10 @@
     for (IDSZone* zone in zones) {
         data = [[data stringByAppendingString:@"|"] stringByAppendingString:zone.name];
     }
-    if([data length] > 0) [self.indoorsInstance message:@"enteredZone" withData:data];
+    if([data length] > 0 || self.lastZones != data) {
+        [self.indoorsInstance message:@"enteredZone" withData:data];
+        self.lastZones = data;
+    }
 }
 
 - (void)changedFloor:(int)floorLevel withName:(NSString*)name {
