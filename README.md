@@ -1,7 +1,7 @@
 cordova-indoors
 ===============
 
-Cordova/Phonegap Plugin for indoo.rs
+Cordova/Phonegap Plugin for <a href="http://indoo.rs">indoo.rs</a>
 
 
 EXAMPLE USAGE: 
