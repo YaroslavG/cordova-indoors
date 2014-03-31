@@ -19,22 +19,13 @@ IndoorNav = {
 	init: function(apikey, building) {
 		IndoorNav.indoors = new indoors(apikey, building);
 		IndoorNav.indoors.onmessage = function(e) {
-    		try {
-    			console.log('MESSAGE: ' + e.data.indoorsEvent + ' | DATA: ' + e.data.indoorsData) ; //TODO
-    		}
-    		catch (e) {}
+   			console.log('MESSAGE: ' + e.data.indoorsEvent + ' | DATA: ' + e.data.indoorsData) ; //TODO
     	};
     	IndoorNav.indoors.onsuccess = function(e) {
-    		try {
-    			console.log('SUCCESS: ' + e.data.indoorsEvent + ' | DATA: ' + e.data.indoorsData); //TODO
-    		}
-    		catch (e) {}
+   			console.log('SUCCESS: ' + e.data.indoorsEvent + ' | DATA: ' + e.data.indoorsData); //TODO
     	};
     	IndoorNav.indoors.onerror = function(e) {
-    		try {
-    			console.log('ERROR: ' + e.data.indoorsEvent + ' | DATA: ' + e.data.indoorsData) ; //TODO
-    		}
-    		catch (e) {}
+   			console.log('ERROR: ' + e.data.indoorsEvent + ' | DATA: ' + e.data.indoorsData) ; //TODO
     	};
 	},
 	
