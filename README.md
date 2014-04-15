@@ -22,7 +22,7 @@ see http://indoo.rs/instructions/ how to add indoo.rs SDK to your application.
 
 4. copy the `www/indoors.js` file into your application's `assets/www` folder.
 
-5. include `indoors.js` into your index.html
+5. include `indoors.js` into your **index.html**
 
 6. see Example Usage how to use Plugin
 
@@ -43,7 +43,7 @@ see http://indoo.rs/instructions/ how to add indoo.rs SDK to your application.
 ```
 5. copy the `www/indoors.js` file into the **www** directory in Xcode.
 
-6. include `indoors.js` into your index.html
+6. include `indoors.js` into your **index.html**
 
 7. see Example Usage how to use Plugin
 
